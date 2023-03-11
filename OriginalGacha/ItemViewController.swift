@@ -55,5 +55,22 @@ class ItemViewController: UIViewController, UITableViewDataSource{
             newItemViewController.category = self.selectedCategory
         }
     }
+    
+    // 削除機能
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+
+            //Realmから消す
+            try! realm.write {
+                realm.delete(items[indexPath.row])
+            }
+
+            //配列から消す？
+            items.remove(at: indexPath.row)
+            //表示上消す
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.reloadData()
+        }
+    }
 }
 
