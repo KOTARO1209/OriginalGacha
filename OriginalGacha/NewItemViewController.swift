@@ -12,6 +12,7 @@ class NewItemViewController: UIViewController {
 
     @IBOutlet var titleTextField: UITextField!
     @IBOutlet var priceTextField: UITextField!
+    @IBOutlet var explanationTextView: UITextView!
     
     let realm = try! Realm()
     var category: Category!
@@ -24,6 +25,7 @@ class NewItemViewController: UIViewController {
         let item = ShoppingItem()
         item.title = titleTextField.text ?? ""
         item.price = Int(priceTextField.text ?? "") ?? 0
+        item.explanation = explanationTextView.text ?? ""
         item.category = category
         createItem(item: item)
         
