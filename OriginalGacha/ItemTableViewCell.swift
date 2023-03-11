@@ -13,7 +13,6 @@ class ItemTableViewCell: UITableViewCell {
 
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var priceLabel: UILabel!
-    @IBOutlet var markImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,10 +22,9 @@ class ItemTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func setCell(title: String, price: Int, isMarked: Bool) {
+    func setCell(title: String, price: Int) {
         titleLabel.text = title
-        priceLabel.text = String(price) + "円"
-        markImageView.image = UIImage(systemName: "star")
+        priceLabel.text = String(price)
     }
     
 }

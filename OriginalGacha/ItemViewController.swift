@@ -39,7 +39,7 @@ class ItemViewController: UIViewController, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! ItemTableViewCell
         let item: ShoppingItem = items[indexPath.row]
-        cell.setCell(title: item.title, price: item.price, isMarked: item.isMarked)
+        cell.setCell(title: item.title, price: item.price)
         
         return cell
     }

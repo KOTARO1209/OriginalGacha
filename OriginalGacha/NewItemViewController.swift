@@ -12,7 +12,6 @@ class NewItemViewController: UIViewController {
 
     @IBOutlet var titleTextField: UITextField!
     @IBOutlet var priceTextField: UITextField!
-    @IBOutlet var markSwitch: UISwitch!
     
     let realm = try! Realm()
     var category: Category!
@@ -25,7 +24,6 @@ class NewItemViewController: UIViewController {
         let item = ShoppingItem()
         item.title = titleTextField.text ?? ""
         item.price = Int(priceTextField.text ?? "") ?? 0
-        item.isMarked = markSwitch.isOn
         item.category = category
         createItem(item: item)
         
