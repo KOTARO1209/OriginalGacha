@@ -11,6 +11,7 @@ import RealmSwift
 class ShoppingItem: Object {
     @Persisted var title: String = ""
     @Persisted var price: Int = 0
+    //ここに画像の保存も入る予定
     @Persisted var explanation: String = ""
     
     @Persisted var category: Category?

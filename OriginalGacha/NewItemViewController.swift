@@ -12,6 +12,7 @@ class NewItemViewController: UIViewController {
 
     @IBOutlet var titleTextField: UITextField!
     @IBOutlet var priceTextField: UITextField!
+    //ここに画像の保存も入れる予定
     @IBOutlet var explanationTextView: UITextView!
     
     let realm = try! Realm()

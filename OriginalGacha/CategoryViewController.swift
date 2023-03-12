@@ -9,8 +9,8 @@
 import UIKit
 import RealmSwift
 
-class CategoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+class CategoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CustomCellDelegate {
+    
     @IBOutlet var tableView: UITableView!
     
     let realm = try! Realm()
@@ -19,6 +19,8 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.register(UINib(nibName: "GachaListButtonTableViewCell", bundle: nil), forCellReuseIdentifier: "CategoryCell")
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -35,10 +37,16 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell")!
-        cell.textLabel?.text = categories[indexPath.row].title
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as? GachaListButtonTableViewCell
+        cell?.delegate = self
+        print(categories)
+        let titleData = categories[indexPath.row].title
         
-        return cell
+       print(titleData)
+        cell?.configure(title: titleData)
+//        cell.textLabel?.text = categories[indexPath.row].title
+        
+        return cell!
     }
     
     //セルが押されたら画面遷移する
@@ -59,4 +67,12 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         }
     }
 
+}
+
+// ボタンを押した時にガチャリストから”それ”をセットする
+extension CategoryViewController {
+    func customCellDelegateDidTapButton(cell: UITableViewCell, categoryTitle: String) {
+        SelectGachaData.shared.gachaTitle = categoryTitle
+        self.navigationController?.popViewController(animated: true)
+    }
 }

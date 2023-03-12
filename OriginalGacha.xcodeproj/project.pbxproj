@@ -23,6 +23,10 @@
 		99FD106729B5D8760028B2A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99FD106529B5D8760028B2A6 /* Main.storyboard */; };
 		99FD106929B5D8770028B2A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99FD106829B5D8770028B2A6 /* Assets.xcassets */; };
 		99FD106C29B5D8770028B2A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99FD106A29B5D8770028B2A6 /* LaunchScreen.storyboard */; };
+		99FF730029BE1759007E26B6 /* DataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FF72FF29BE1759007E26B6 /* DataClass.swift */; };
+		99FF730429BE1B1C007E26B6 /* FistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FF730329BE1B1C007E26B6 /* FistViewController.swift */; };
+		99FF730729BE1E99007E26B6 /* GachaListButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FF730529BE1E99007E26B6 /* GachaListButtonTableViewCell.swift */; };
+		99FF730829BE1E99007E26B6 /* GachaListButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99FF730629BE1E99007E26B6 /* GachaListButtonTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,10 @@
 		99FD106829B5D8770028B2A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99FD106B29B5D8770028B2A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99FD106D29B5D8770028B2A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99FF72FF29BE1759007E26B6 /* DataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataClass.swift; sourceTree = "<group>"; };
+		99FF730329BE1B1C007E26B6 /* FistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FistViewController.swift; sourceTree = "<group>"; };
+		99FF730529BE1E99007E26B6 /* GachaListButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GachaListButtonTableViewCell.swift; sourceTree = "<group>"; };
+		99FF730629BE1E99007E26B6 /* GachaListButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GachaListButtonTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,7 @@
 				99FD106829B5D8770028B2A6 /* Assets.xcassets */,
 				99FD106A29B5D8770028B2A6 /* LaunchScreen.storyboard */,
 				99FD106D29B5D8770028B2A6 /* Info.plist */,
+				99FF730329BE1B1C007E26B6 /* FistViewController.swift */,
 				99B9ABCC29BA1CEB0008C7D3 /* ShoppingItem.swift */,
 				99B9ABCE29BA1E790008C7D3 /* ItemTableViewCell.swift */,
 				99B9ABCF29BA1E790008C7D3 /* ItemTableViewCell.xib */,
@@ -91,6 +100,9 @@
 				990E968629BAFD2700B9A9F1 /* CategoryViewController.swift */,
 				99DFF02C29BCD4C9003401C4 /* NewCategoryViewController.swift */,
 				99DFF02E29BDBDE4003401C4 /* gachagacha.png */,
+				99FF72FF29BE1759007E26B6 /* DataClass.swift */,
+				99FF730529BE1E99007E26B6 /* GachaListButtonTableViewCell.swift */,
+				99FF730629BE1E99007E26B6 /* GachaListButtonTableViewCell.xib */,
 			);
 			path = OriginalGacha;
 			sourceTree = "<group>";
@@ -164,6 +176,7 @@
 				99FD106C29B5D8770028B2A6 /* LaunchScreen.storyboard in Resources */,
 				99FD106929B5D8770028B2A6 /* Assets.xcassets in Resources */,
 				99FD106729B5D8760028B2A6 /* Main.storyboard in Resources */,
+				99FF730829BE1E99007E26B6 /* GachaListButtonTableViewCell.xib in Resources */,
 				99DFF02F29BDBDE4003401C4 /* gachagacha.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,8 +188,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99FF730729BE1E99007E26B6 /* GachaListButtonTableViewCell.swift in Sources */,
 				99B9ABCD29BA1CEB0008C7D3 /* ShoppingItem.swift in Sources */,
 				99DFF02D29BCD4C9003401C4 /* NewCategoryViewController.swift in Sources */,
+				99FF730029BE1759007E26B6 /* DataClass.swift in Sources */,
 				99FD106429B5D8760028B2A6 /* ItemViewController.swift in Sources */,
 				99B9ABD329BA29C50008C7D3 /* NewItemViewController.swift in Sources */,
 				99B9ABD029BA1E790008C7D3 /* ItemTableViewCell.swift in Sources */,
@@ -184,6 +199,7 @@
 				99FD106029B5D8760028B2A6 /* AppDelegate.swift in Sources */,
 				99FD106229B5D8760028B2A6 /* SceneDelegate.swift in Sources */,
 				990E968529BAF39B00B9A9F1 /* Category.swift in Sources */,
+				99FF730429BE1B1C007E26B6 /* FistViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
