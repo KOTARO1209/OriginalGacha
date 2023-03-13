@@ -25,5 +25,5 @@ class FistViewController: UIViewController {
         guard let title = SelectGachaData.shared.gachaTitle else {return}
         self.gachaTitleLabel.text = title
     }
-
+    
 }

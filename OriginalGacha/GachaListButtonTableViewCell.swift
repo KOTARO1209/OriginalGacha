@@ -25,12 +25,8 @@ class GachaListButtonTableViewCell: UITableViewCell {
     }
 
     func configure(title: String) {
-       
-       
         gachaTitleLabel.text = String(title)
     }
-    
-    //オプションの値を暗黙的にアンラップ中に予期せず nil が見つかりました
     
 }
 

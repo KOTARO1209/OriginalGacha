@@ -69,10 +69,16 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
 
 }
 
+//CategoryViewControllerで選択したガチャのタイトルをセットしているみたいなので、ここでタイトルをセットするついでにガチャの中身もSelectGachaDataに保存してあげたら良いと思います！！ちなみにガチャのタイトルに該当するガチャの中身はRealmのフィルター機能を使えば取得できそう！！
+
 // ボタンを押した時にガチャリストから”それ”をセットする
 extension CategoryViewController {
-    func customCellDelegateDidTapButton(cell: UITableViewCell, categoryTitle: String) {
+    func customCellDelegateDidTapButton(cell: UITableViewCell, categoryTitle: String, categoryData: [ShoppingItem]) {
         SelectGachaData.shared.gachaTitle = categoryTitle
+        
+        //var gachaData: [ShoppingItem]を取得して入れてる？
+        SelectGachaData.shared.gachaData = categoryData
+        
         self.navigationController?.popViewController(animated: true)
     }
 }

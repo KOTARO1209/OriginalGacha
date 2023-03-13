@@ -105,10 +105,10 @@
             </objects>
             <point key="canvasLocation" x="843.51145038167931" y="-2.1126760563380285"/>
         </scene>
-        <!--View Controller-->
+        <!--Gacha View Controller-->
         <scene sceneID="KoX-jQ-37D">
             <objects>
-                <viewController id="hod-Sp-ExR" sceneMemberID="viewController">
+                <viewController id="hod-Sp-ExR" customClass="GachaViewController" customModule="OriginalGacha" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mec-2C-Hu2">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -171,6 +171,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="DOi-Nz-0Pb"/>
+                    <connections>
+                        <outlet property="objectNameLabel" destination="yfF-66-FDy" id="hYW-5R-DRi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CUK-Af-7FG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
