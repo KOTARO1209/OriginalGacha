@@ -22,7 +22,7 @@ class FistViewController: UIViewController {
     
     // 選択したガチャの中身の名前を最初の画面に表示する
     func viewSetUp(){
-        guard let title = SelectGachaData.shared.gachaTitle else {return}
+        guard let title = GachaName.shared.gachaTitle else {return}
         self.gachaTitleLabel.text = title
     }
     

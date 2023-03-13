@@ -8,7 +8,7 @@
 import UIKit
 import RealmSwift
 
-class NewItemViewController: UIViewController {
+class DetailViewController: UIViewController {
 
     @IBOutlet var titleTextField: UITextField!
     @IBOutlet var priceTextField: UITextField!
@@ -16,14 +16,14 @@ class NewItemViewController: UIViewController {
     @IBOutlet var explanationTextView: UITextView!
     
     let realm = try! Realm()
-    var category: Category!
+    var category: GachaList!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func save() {
-        let item = ShoppingItem()
+        let item = GachaItem()
         item.title = titleTextField.text ?? ""
         item.price = Int(priceTextField.text ?? "") ?? 0
         item.explanation = explanationTextView.text ?? ""
@@ -31,12 +31,12 @@ class NewItemViewController: UIViewController {
         createItem(item: item)
         
         let previousNC = self.presentingViewController as! UINavigationController
-        let previousVC = previousNC.viewControllers[previousNC.viewControllers.count - 1] as! ItemViewController
+        let previousVC = previousNC.viewControllers[previousNC.viewControllers.count - 1] as! InsideListViewController
         
         self.dismiss(animated: true)
     }
     
-    func createItem(item: ShoppingItem) {
+    func createItem(item: GachaItem) {
         try! realm.write {
             realm.add(item)
         }

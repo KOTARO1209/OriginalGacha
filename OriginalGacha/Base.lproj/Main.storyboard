@@ -65,7 +65,7 @@
         <!--ガチャリスト-->
         <scene sceneID="EcH-Ir-8ra">
             <objects>
-                <viewController id="1QQ-Ao-UAX" customClass="CategoryViewController" customModule="OriginalGacha" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1QQ-Ao-UAX" customClass="GachaListViewController" customModule="OriginalGacha" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Rg-8f-PAg">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -179,10 +179,10 @@
             </objects>
             <point key="canvasLocation" x="843.51145038167931" y="-757.04225352112678"/>
         </scene>
-        <!--New Category View Controller-->
+        <!--Gacha Name View Controller-->
         <scene sceneID="LyJ-4Y-W3j">
             <objects>
-                <viewController id="QSs-qJ-WIn" customClass="NewCategoryViewController" customModule="OriginalGacha" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QSs-qJ-WIn" customClass="GachaNameViewController" customModule="OriginalGacha" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fBJ-fH-xJE">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -224,7 +224,7 @@
         <!--ガチャ名-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ItemViewController" customModule="OriginalGacha" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="InsideListViewController" customModule="OriginalGacha" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -267,10 +267,10 @@
             </objects>
             <point key="canvasLocation" x="1919.8473282442746" y="326.76056338028172"/>
         </scene>
-        <!--New Item View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="3BV-xU-zVI">
             <objects>
-                <viewController id="Bv2-vs-vo8" customClass="NewItemViewController" customModule="OriginalGacha" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Bv2-vs-vo8" customClass="DetailViewController" customModule="OriginalGacha" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z2M-aB-ukW">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

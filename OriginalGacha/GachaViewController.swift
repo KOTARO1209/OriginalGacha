@@ -24,8 +24,8 @@ class GachaViewController: UIViewController {
     // ShoppingItemから「title: String = ""」を取り出してnameに入れたい
     // 選択したガチャの中身の名前を最初の画面に表示する
     func gachagacha(){
-        guard let name = SelectGachaData.shared.gachaData.title else {return}
-        self.objectNameLabel.text = name
+        //guard let name = SelectGachaData.shared.gachaData.title else {return}
+        //self.objectNameLabel.text = name
     }
 
 }

@@ -7,9 +7,9 @@
 
 import Foundation
 
-final class SelectGachaData {
-    static let shared = SelectGachaData()
+final class GachaName {
+    static let shared = GachaName()
     var gachaTitle: String?
-    var gachaData: [ShoppingItem]?
+    var gachaData: [GachaItem]?
     private init() {}
 }

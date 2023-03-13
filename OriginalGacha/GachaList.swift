@@ -8,6 +8,6 @@
 import Foundation
 import RealmSwift
 
-class Category: Object {
+class GachaList: Object {
     @Persisted var title: String = ""
 }

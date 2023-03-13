@@ -8,7 +8,7 @@
 import UIKit
 import RealmSwift
 
-class NewCategoryViewController: UIViewController {
+class GachaNameViewController: UIViewController {
 
     @IBOutlet var categoryTextField: UITextField!
     
@@ -19,14 +19,14 @@ class NewCategoryViewController: UIViewController {
     }
     
     @IBAction func save() {
-        let category = Category()
+        let category = GachaList()
         category.title = categoryTextField.text ?? ""
         createCategory(category: category)
         
         self.dismiss(animated: true)
     }
     
-    func createCategory(category: Category) {
+    func createCategory(category: GachaList) {
         try! realm.write {
             realm.add(category)
         }

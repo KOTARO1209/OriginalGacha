@@ -10,13 +10,13 @@
 import UIKit
 import RealmSwift
 
-class ItemViewController: UIViewController, UITableViewDataSource{
+class InsideListViewController: UIViewController, UITableViewDataSource{
 
     @IBOutlet var tableView: UITableView!
     
     let realm = try! Realm()
-    var items: [ShoppingItem] = []
-    var selectedCategory: Category!
+    var items: [GachaItem] = []
+    var selectedCategory: GachaList!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,19 +38,19 @@ class ItemViewController: UIViewController, UITableViewDataSource{
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! ItemTableViewCell
-        let item: ShoppingItem = items[indexPath.row]
+        let item: GachaItem = items[indexPath.row]
         cell.setCell(title: item.title, price: item.price, explanation: item.explanation)
         return cell
     }
     
-    func readItems() -> [ShoppingItem] {
-        return Array(realm.objects(ShoppingItem.self).filter("category == %@", selectedCategory!))
+    func readItems() -> [GachaItem] {
+        return Array(realm.objects(GachaItem.self).filter("category == %@", selectedCategory!))
     }
     
     //「prepare()」メソッドを使って、Segueが発動する時に遷移先のNewItemViewControllerのcategory変数に、この画面(ItemViewController)のselectedCategoryを代入して値渡ししている
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toNewItemView" {
-            let newItemViewController = segue.destination as! NewItemViewController
+            let newItemViewController = segue.destination as! DetailViewController
             newItemViewController.category = self.selectedCategory
         }
     }

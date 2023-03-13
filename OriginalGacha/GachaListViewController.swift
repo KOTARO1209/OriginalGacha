@@ -9,13 +9,18 @@
 import UIKit
 import RealmSwift
 
-class CategoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CustomCellDelegate {
+class GachaListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CustomCellDelegate {
+    
+    func customCellDelegateDidTapButton(cell: UITableViewCell, categoryTitle: String) {
+        //なぜかエラー解消のために追加された
+    }
+    
     
     @IBOutlet var tableView: UITableView!
     
     let realm = try! Realm()
-    var categories: [Category] = []
-    var selectedCategory: Category? = nil
+    var categories: [GachaList] = []
+    var selectedCategory: GachaList? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,29 +60,29 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         self.performSegue(withIdentifier: "toItemView", sender: nil)
     }
     
-    func readCategories() -> [Category] {
-        return Array(realm.objects(Category.self))
+    func readCategories() -> [GachaList] {
+        return Array(realm.objects(GachaList.self))
     }
     
     //値の受け渡しをする。prepareはsegueが発動する時に実行される
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toItemView" {
-            let itemViewController = segue.destination as! ItemViewController
+            let itemViewController = segue.destination as! InsideListViewController
             itemViewController.selectedCategory = self.selectedCategory!
         }
     }
 
 }
 
-//CategoryViewControllerで選択したガチャのタイトルをセットしているみたいなので、ここでタイトルをセットするついでにガチャの中身もSelectGachaDataに保存してあげたら良いと思います！！ちなみにガチャのタイトルに該当するガチャの中身はRealmのフィルター機能を使えば取得できそう！！
+//GachaListViewControllerで選択したガチャのタイトルをセットしているみたいなので、ここでタイトルをセットするついでにガチャの中身もSelectGachaDataに保存してあげたら良いと思います！！ちなみにガチャのタイトルに該当するガチャの中身はRealmのフィルター機能を使えば取得できそう！！
 
 // ボタンを押した時にガチャリストから”それ”をセットする
-extension CategoryViewController {
-    func customCellDelegateDidTapButton(cell: UITableViewCell, categoryTitle: String, categoryData: [ShoppingItem]) {
-        SelectGachaData.shared.gachaTitle = categoryTitle
+extension GachaListViewController {
+    func customCellDelegateDidTapButton(cell: UITableViewCell, categoryTitle: String, categoryData: [GachaItem]) {
+        GachaName.shared.gachaTitle = categoryTitle
         
         //var gachaData: [ShoppingItem]を取得して入れてる？
-        SelectGachaData.shared.gachaData = categoryData
+        GachaName.shared.gachaData = categoryData
         
         self.navigationController?.popViewController(animated: true)
     }

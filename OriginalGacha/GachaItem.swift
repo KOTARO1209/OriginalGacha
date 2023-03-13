@@ -8,11 +8,11 @@
 import Foundation
 import RealmSwift
 
-class ShoppingItem: Object {
+class GachaItem: Object {
     @Persisted var title: String = ""
     @Persisted var price: Int = 0
     //ここに画像の保存も入る予定
     @Persisted var explanation: String = ""
     
-    @Persisted var category: Category?
+    @Persisted var category: GachaList?
 }
