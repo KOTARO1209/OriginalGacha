@@ -14,5 +14,7 @@ class GachaItem: Object {
     //ここに画像の保存も入る予定
     @Persisted var explanation: String = ""
     
+    static let shared = GachaItem()
+    
     @Persisted var category: GachaName?
 }

@@ -43,7 +43,7 @@ class GachaListViewController: UIViewController, UITableViewDataSource, UITableV
         let titleData = categories[indexPath.row].title
         
        print(titleData)
-        cell?.configure(title: titleData)
+        cell?.configure(title: titleData, category: categories[indexPath.row])
 //        cell.textLabel?.text = categories[indexPath.row].title
         
         return cell!
@@ -73,10 +73,10 @@ class GachaListViewController: UIViewController, UITableViewDataSource, UITableV
 
 // ボタンを押した時にガチャリストから”それ”をセットする
 extension GachaListViewController {
-    func customCellDelegateDidTapButton(cell: UITableViewCell, categoryTitle: String) {
+    func customCellDelegateDidTapButton(cell: UITableViewCell, categoryTitle: String, category: GachaName) {
         GachaName.shared.title = categoryTitle
         print("test")
-        
+        GachaItem.shared.category = category
         self.navigationController?.popViewController(animated: true)
     }
 }

@@ -10,6 +10,7 @@ import UIKit
 class GachaListButtonTableViewCell: UITableViewCell {
     var delegate: CustomCellDelegate? //追加
     @IBOutlet var gachaTitleLabel: UILabel!
+    var selectedCategory: GachaName?
     
     override class func awakeFromNib() {
         super.awakeFromNib()
@@ -21,17 +22,18 @@ class GachaListButtonTableViewCell: UITableViewCell {
     }
     
     @IBAction func onButtonClick(_ sender: Any) {
-        delegate?.customCellDelegateDidTapButton(cell: self, categoryTitle: gachaTitleLabel.text ?? "") //追加
+        delegate?.customCellDelegateDidTapButton(cell: self, categoryTitle: gachaTitleLabel.text ?? "", category: selectedCategory!) //追加
         
     }
 
-    func configure(title: String) {
+    func configure(title: String, category: GachaName) {
         gachaTitleLabel.text = String(title)
+        selectedCategory = category
     }
     
 }
 
 //追加
 protocol CustomCellDelegate {
-    func customCellDelegateDidTapButton(cell: UITableViewCell, categoryTitle: String)
+    func customCellDelegateDidTapButton(cell: UITableViewCell, categoryTitle: String, category: GachaName)
 }

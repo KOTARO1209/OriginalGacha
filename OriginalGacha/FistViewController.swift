@@ -9,13 +9,14 @@ import UIKit
 import RealmSwift
 
 class FistViewController: UIViewController {
-
+    
     let realm = try! Realm()
     
     @IBOutlet var gachaTitleLabel: UILabel!
     
     var gachaData: [GachaItem]!
     var name: String = ""
+    var category: GachaName!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,8 +40,25 @@ class FistViewController: UIViewController {
     
     func loadGachaData() {
         print(self.name)
-        gachaData = Array(realm.objects(GachaItem.self).filter("category == %@", self.name))
-        
+        category = GachaItem.shared.category
+        gachaData = Array(realm.objects(GachaItem.self).filter("category == %@", category))
+        print(gachaData)
     }
     
+    // segueが動作することをViewControllerに通知するメソッド
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // segueのIDを確認して特定のsegueのときのみ動作させる
+        if segue.identifier == "toGachaViewController" {
+            // 2. 遷移先のViewControllerを取得
+            let next = segue.destination as? GachaViewController
+            // 3. １で用意した遷移先の変数に値を渡す
+            next?.outputValue = self.gachaData
+        }
+    }
+    
+    @IBAction func tapTransitionButton(_ sender: Any) {
+        // 4. 画面遷移実行
+        performSegue(withIdentifier: "toGachaViewController", sender: nil)
+    }
 }
