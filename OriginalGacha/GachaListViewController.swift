@@ -76,7 +76,7 @@ extension GachaListViewController {
     func customCellDelegateDidTapButton(cell: UITableViewCell, categoryTitle: String) {
         GachaName.shared.title = categoryTitle
         print("test")
-
+        
         self.navigationController?.popViewController(animated: true)
     }
 }
