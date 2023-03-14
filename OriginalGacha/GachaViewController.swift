@@ -18,13 +18,16 @@ class GachaViewController: UIViewController {
     
     // 配列の中に入っている要素の確率の合計値
     var calculationNumber: Int = 0
+    var calculationRandomNumber: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.objectNameLabel.text = outputValue![0].title
-        self.objectProbabilityLabel.text = String(outputValue![0].price)
-        self.objectExplanationTextView.text = outputValue![0].explanation
         probabilityCalculation()
+        
+        // UIへの反映
+        self.objectNameLabel.text = outputValue![calculationRandomNumber].title
+        self.objectProbabilityLabel.text = String(outputValue![calculationRandomNumber].price)
+        self.objectExplanationTextView.text = outputValue![calculationRandomNumber].explanation
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,7 +40,16 @@ class GachaViewController: UIViewController {
             calculationNumber += outputValue![i].price
         }
         print(calculationNumber)
-        print(Int.random(in: 1...calculationNumber))
+        
+        // UIへの反映の時に(0~数)としたいので意図的に-1している
+        calculationRandomNumber = Int.random(in: 1...calculationNumber) - 1
+        print(calculationRandomNumber)
+        
+        // [てぃーてぃー:1, えみりー:3, じねんじょ:3]
+        //calculationNumber = 7
+        //calculationRandomNumber = 1~7
+        
+        
     }
     
 }
