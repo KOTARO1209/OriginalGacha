@@ -39,7 +39,7 @@ class InsideListViewController: UIViewController, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! ItemTableViewCell
         let item: GachaItem = items[indexPath.row]
-        cell.setCell(title: item.title, price: item.price, explanation: item.explanation)
+        cell.setCell(title: item.title, price: item.probability)
         return cell
     }
     

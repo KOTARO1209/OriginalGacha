@@ -27,7 +27,7 @@ class GachaViewController: UIViewController {
         
         // UIへの反映
         self.objectNameLabel.text = outputValue![now_rate].title
-        self.objectProbabilityLabel.text = String(outputValue![now_rate].price)
+        self.objectProbabilityLabel.text = String(outputValue![now_rate].probability)
         self.objectExplanationTextView.text = outputValue![now_rate].explanation
     }
     
@@ -38,13 +38,13 @@ class GachaViewController: UIViewController {
     // 確率の計算をする
     func probabilityCalculation() {
         for i in 0..<outputValue!.count {
-            calculationNumber += outputValue![i].price
+            calculationNumber += outputValue![i].probability
         }
         
         calculationRandomNumber = Int.random(in: 1...calculationNumber)
         
         for i in 0..<outputValue!.count {
-            now_rate += outputValue![i].price
+            now_rate += outputValue![i].probability
             if calculationRandomNumber <= now_rate {
                 now_rate = i
                 break

@@ -63,7 +63,24 @@ class GachaListViewController: UIViewController, UITableViewDataSource, UITableV
             itemViewController.selectedCategory = self.selectedCategory!
         }
     }
-
+    
+    //削除機能
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            
+            //Realmから消す
+            try! realm.write {
+                realm.delete(categories[indexPath.row])
+            }
+            
+            //配列から消す？
+            categories.remove(at: indexPath.row)
+            //表示上消す
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.reloadData()
+        }
+    }
+    
 }
 
 //GachaListViewControllerで選択したガチャのタイトルをセットしているみたいなので、ここでタイトルをセットするついでにガチャの中身もSelectGachaDataに保存してあげたら良いと思います！！ちなみにガチャのタイトルに該当するガチャの中身はRealmのフィルター機能を使えば取得できそう！！

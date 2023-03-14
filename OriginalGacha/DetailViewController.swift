@@ -24,9 +24,9 @@ class DetailViewController: UIViewController {
     
     @IBAction func save() {
         let item = GachaItem()
-        item.title = titleTextField.text ?? ""
-        item.price = Int(priceTextField.text ?? "") ?? 0
-        item.explanation = explanationTextView.text ?? ""
+        item.title = titleTextField.text ?? "name"
+        item.probability = Int(priceTextField.text ?? "") ?? 1
+        item.explanation = explanationTextView.text ?? "This is test TextView."
         item.category = category
         createItem(item: item)
         
