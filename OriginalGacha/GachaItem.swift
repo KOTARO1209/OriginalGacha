@@ -14,5 +14,5 @@ class GachaItem: Object {
     //ここに画像の保存も入る予定
     @Persisted var explanation: String = ""
     
-    @Persisted var category: GachaList?
+    @Persisted var category: GachaName?
 }

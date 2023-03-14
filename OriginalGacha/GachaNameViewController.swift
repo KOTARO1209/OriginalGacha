@@ -19,14 +19,14 @@ class GachaNameViewController: UIViewController {
     }
     
     @IBAction func save() {
-        let category = GachaList()
+        let category = GachaName()
         category.title = categoryTextField.text ?? ""
         createCategory(category: category)
         
         self.dismiss(animated: true)
     }
     
-    func createCategory(category: GachaList) {
+    func createCategory(category: GachaName) {
         try! realm.write {
             realm.add(category)
         }

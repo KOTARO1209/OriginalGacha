@@ -1,15 +1,14 @@
 //
-//  DataClass.swift
+//  Category.swift
 //  OriginalGacha
 //
-//  Created by まちだこうたろう on 2023/03/12.
+//  Created by まちだこうたろう on 2023/03/10.
 //
 
 import Foundation
+import RealmSwift
 
-final class GachaName {
+class GachaName: Object {
+    @Persisted var title: String
     static let shared = GachaName()
-    var gachaTitle: String?
-    var gachaData: [GachaItem]?
-    private init() {}
 }

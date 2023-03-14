@@ -10,9 +10,9 @@ import RealmSwift
 
 class FistViewController: UIViewController {
 
-    @IBOutlet var gachaTitleLabel: UILabel!
-    
     let realm = try! Realm()
+    
+    @IBOutlet var gachaTitleLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,7 @@ class FistViewController: UIViewController {
     
     // 選択したガチャの中身の名前を最初の画面に表示する
     func viewSetUp(){
-        guard let title = GachaName.shared.gachaTitle else {return}
+        let title = GachaName.shared.title
         print(title)
         self.gachaTitleLabel.text = title
     }

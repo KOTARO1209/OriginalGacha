@@ -16,7 +16,7 @@ class DetailViewController: UIViewController {
     @IBOutlet var explanationTextView: UITextView!
     
     let realm = try! Realm()
-    var category: GachaList!
+    var category: GachaName!
     
     override func viewDidLoad() {
         super.viewDidLoad()

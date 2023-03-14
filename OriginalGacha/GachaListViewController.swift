@@ -14,8 +14,8 @@ class GachaListViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet var tableView: UITableView!
     
     let realm = try! Realm()
-    var categories: [GachaList] = []
-    var selectedCategory: GachaList? = nil
+    var categories: [GachaName] = []
+    var selectedCategory: GachaName? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,8 +55,8 @@ class GachaListViewController: UIViewController, UITableViewDataSource, UITableV
         self.performSegue(withIdentifier: "toItemView", sender: nil)
     }
     
-    func readCategories() -> [GachaList] {
-        return Array(realm.objects(GachaList.self))
+    func readCategories() -> [GachaName] {
+        return Array(realm.objects(GachaName.self))
     }
     
     //値の受け渡しをする。prepareはsegueが発動する時に実行される
@@ -74,7 +74,7 @@ class GachaListViewController: UIViewController, UITableViewDataSource, UITableV
 // ボタンを押した時にガチャリストから”それ”をセットする
 extension GachaListViewController {
     func customCellDelegateDidTapButton(cell: UITableViewCell, categoryTitle: String) {
-        GachaName.shared.gachaTitle = categoryTitle
+        GachaName.shared.title = categoryTitle
         print("test")
 
         self.navigationController?.popViewController(animated: true)

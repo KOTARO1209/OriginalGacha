@@ -16,7 +16,7 @@ class InsideListViewController: UIViewController, UITableViewDataSource{
     
     let realm = try! Realm()
     var items: [GachaItem] = []
-    var selectedCategory: GachaList!
+    var selectedCategory: GachaName!
     
     override func viewDidLoad() {
         super.viewDidLoad()
