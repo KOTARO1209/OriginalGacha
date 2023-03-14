@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		990E968529BAF39B00B9A9F1 /* GachaList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990E968429BAF39B00B9A9F1 /* GachaList.swift */; };
 		990E968729BAFD2700B9A9F1 /* GachaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990E968629BAFD2700B9A9F1 /* GachaListViewController.swift */; };
+		9976AFA529C0610C00816E61 /* GachaList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9976AFA429C0610C00816E61 /* GachaList.swift */; };
 		99B9ABC929BA19CB0008C7D3 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 99B9ABC829BA19CB0008C7D3 /* Realm */; };
 		99B9ABCB29BA19CB0008C7D3 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 99B9ABCA29BA19CB0008C7D3 /* RealmSwift */; };
 		99B9ABCD29BA1CEB0008C7D3 /* GachaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B9ABCC29BA1CEB0008C7D3 /* GachaItem.swift */; };
@@ -31,8 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		990E968429BAF39B00B9A9F1 /* GachaList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GachaList.swift; sourceTree = "<group>"; };
 		990E968629BAFD2700B9A9F1 /* GachaListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GachaListViewController.swift; sourceTree = "<group>"; };
+		9976AFA429C0610C00816E61 /* GachaList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GachaList.swift; sourceTree = "<group>"; };
 		99B9ABCC29BA1CEB0008C7D3 /* GachaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GachaItem.swift; sourceTree = "<group>"; };
 		99B9ABCE29BA1E790008C7D3 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		99B9ABCF29BA1E790008C7D3 /* ItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
@@ -97,10 +97,10 @@
 				99FF730329BE1B1C007E26B6 /* FistViewController.swift */,
 				99E36B8F29BEFFD4003AAAFE /* GachaViewController.swift */,
 				99B9ABCC29BA1CEB0008C7D3 /* GachaItem.swift */,
+				9976AFA429C0610C00816E61 /* GachaList.swift */,
 				99B9ABCE29BA1E790008C7D3 /* ItemTableViewCell.swift */,
 				99B9ABCF29BA1E790008C7D3 /* ItemTableViewCell.xib */,
 				99B9ABD229BA29C50008C7D3 /* DetailViewController.swift */,
-				990E968429BAF39B00B9A9F1 /* GachaList.swift */,
 				990E968629BAFD2700B9A9F1 /* GachaListViewController.swift */,
 				99DFF02C29BCD4C9003401C4 /* GachaNameViewController.swift */,
 				99FF72FF29BE1759007E26B6 /* GachaName.swift */,
@@ -200,9 +200,9 @@
 				99B9ABD329BA29C50008C7D3 /* DetailViewController.swift in Sources */,
 				99B9ABD029BA1E790008C7D3 /* ItemTableViewCell.swift in Sources */,
 				990E968729BAFD2700B9A9F1 /* GachaListViewController.swift in Sources */,
+				9976AFA529C0610C00816E61 /* GachaList.swift in Sources */,
 				99FD106029B5D8760028B2A6 /* AppDelegate.swift in Sources */,
 				99FD106229B5D8760028B2A6 /* SceneDelegate.swift in Sources */,
-				990E968529BAF39B00B9A9F1 /* GachaList.swift in Sources */,
 				99FF730429BE1B1C007E26B6 /* FistViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

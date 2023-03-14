@@ -22,6 +22,7 @@ class GachaListButtonTableViewCell: UITableViewCell {
     
     @IBAction func onButtonClick(_ sender: Any) {
         delegate?.customCellDelegateDidTapButton(cell: self, categoryTitle: gachaTitleLabel.text ?? "") //追加
+        
     }
 
     func configure(title: String) {

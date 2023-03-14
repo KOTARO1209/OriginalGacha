@@ -11,11 +11,6 @@ import RealmSwift
 
 class GachaListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CustomCellDelegate {
     
-    func customCellDelegateDidTapButton(cell: UITableViewCell, categoryTitle: String) {
-        //なぜかエラー解消のために追加された
-    }
-    
-    
     @IBOutlet var tableView: UITableView!
     
     let realm = try! Realm()
@@ -78,12 +73,10 @@ class GachaListViewController: UIViewController, UITableViewDataSource, UITableV
 
 // ボタンを押した時にガチャリストから”それ”をセットする
 extension GachaListViewController {
-    func customCellDelegateDidTapButton(cell: UITableViewCell, categoryTitle: String, categoryData: [GachaItem]) {
+    func customCellDelegateDidTapButton(cell: UITableViewCell, categoryTitle: String) {
         GachaName.shared.gachaTitle = categoryTitle
-        
-        //var gachaData: [ShoppingItem]を取得して入れてる？
-        GachaName.shared.gachaData = categoryData
-        
+        print("test")
+
         self.navigationController?.popViewController(animated: true)
     }
 }
