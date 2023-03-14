@@ -26,7 +26,6 @@ class FistViewController: UIViewController {
         super.viewWillAppear(animated)
         self.viewSetUp()
         self.loadGachaData()
-        print(gachaData)
     }
     
     // 選択したガチャの中身の名前を最初の画面に表示する

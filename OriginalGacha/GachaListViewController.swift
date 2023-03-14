@@ -39,12 +39,9 @@ class GachaListViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as? GachaListButtonTableViewCell
         cell?.delegate = self
-        print(categories)
         let titleData = categories[indexPath.row].title
         
-       print(titleData)
         cell?.configure(title: titleData, category: categories[indexPath.row])
-//        cell.textLabel?.text = categories[indexPath.row].title
         
         return cell!
     }
@@ -75,7 +72,6 @@ class GachaListViewController: UIViewController, UITableViewDataSource, UITableV
 extension GachaListViewController {
     func customCellDelegateDidTapButton(cell: UITableViewCell, categoryTitle: String, category: GachaName) {
         GachaName.shared.title = categoryTitle
-        print("test")
         GachaItem.shared.category = category
         self.navigationController?.popViewController(animated: true)
     }
