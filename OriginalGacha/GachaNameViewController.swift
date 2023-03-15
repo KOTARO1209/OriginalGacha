@@ -26,6 +26,10 @@ class GachaNameViewController: UIViewController {
         self.dismiss(animated: true)
     }
     
+    @IBAction func backButtonAction(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     func createCategory(category: GachaName) {
         try! realm.write {
             realm.add(category)

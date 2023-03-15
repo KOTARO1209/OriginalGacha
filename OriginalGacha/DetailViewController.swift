@@ -35,11 +35,11 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         saveImage()
         
         let item = GachaItem()
-        item.title = titleTextField.text ?? "name"
+        item.title = titleTextField.text ?? String("name")
         item.probability = Int(priceTextField.text ?? "") ?? 1
         item.explanation = explanationTextView.text ?? "This is test TextView."
         item.category = category
-        print(fileName)
+        
         //画像をRealmに保存
         item.picture = fileName
         createItem(item: item)
@@ -59,6 +59,10 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
     }
     
+    @IBAction func backButtonAction(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true)
         guard let image = info[.originalImage] as? UIImage else{
@@ -76,26 +80,17 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
     }
     
-    //画像保存用関数1
+    //画像保存用関数
     func saveImage() {
-        createLocalDataFile()
-        
-        let pngImageData = imageView.image?.pngData()
-        do {
-            try pngImageData!.write(to: directoryFileURL)
-        } catch {
-            print("エラー")
-        }
-    }
-    
-    //画像保存用関数2
-    func createLocalDataFile() {
         fileName = "\(NSUUID().uuidString).png"
         if directoryFileURL != nil{
             let path = directoryFileURL.appendingPathComponent(fileName)
             directoryFileURL = path
-            print("testtttt")
         }
+        
+        let pngImageData = imageView.image?.pngData()
+        do {
+            try pngImageData!.write(to: directoryFileURL)
+        } catch { }
     }
-
 }
