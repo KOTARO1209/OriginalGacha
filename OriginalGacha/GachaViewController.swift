@@ -11,10 +11,12 @@ class GachaViewController: UIViewController {
     
     @IBOutlet var objectNameLabel: UILabel!
     @IBOutlet var objectProbabilityLabel: UILabel!
+    @IBOutlet var objectImageView: UIImageView!
     @IBOutlet var objectExplanationTextView: UITextView!
     
     // 1. 遷移先に渡したい値を格納する変数を用意する
     var outputValue: [GachaItem]?
+    var directoryFileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
     
     // 配列の中に入っている要素の確率の合計値
     var calculationNumber: Int = 0
@@ -29,6 +31,16 @@ class GachaViewController: UIViewController {
         self.objectNameLabel.text = outputValue![now_rate].title
         self.objectProbabilityLabel.text = String(outputValue![now_rate].probability)
         self.objectExplanationTextView.text = outputValue![now_rate].explanation
+        
+        //画像のロード
+        let fileURL = directoryFileURL.appendingPathComponent((outputValue![now_rate].picture)!)
+        let filePath = fileURL.path
+        
+        if FileManager.default.fileExists(atPath: filePath){
+            if let imageData = UIImage(contentsOfFile: filePath) {
+                objectImageView.image = imageData
+            } else {}
+        } else {}
     }
     
     override func viewWillAppear(_ animated: Bool) {

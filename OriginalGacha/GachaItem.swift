@@ -11,7 +11,7 @@ import RealmSwift
 class GachaItem: Object {
     @Persisted var title: String = ""
     @Persisted var probability: Int = 0
-    //ここに画像の保存も入る予定
+    @Persisted var picture: String!
     @Persisted var explanation: String = ""
     
     static let shared = GachaItem()

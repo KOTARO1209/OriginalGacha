@@ -13,6 +13,7 @@ class FistViewController: UIViewController {
     let realm = try! Realm()
     
     @IBOutlet var gachaTitleLabel: UILabel!
+    @IBOutlet var syouhingazou: UIImageView!
     
     var gachaData: [GachaItem]!
     var name: String = ""
