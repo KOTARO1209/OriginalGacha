@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		990E968729BAFD2700B9A9F1 /* GachaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990E968629BAFD2700B9A9F1 /* GachaListViewController.swift */; };
 		9944EAB129C2376500C4D06C /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9944EAB029C2376500C4D06C /* icon.png */; };
+		9944EABD29C5087600C4D06C /* Capsule.png in Resources */ = {isa = PBXBuildFile; fileRef = 9944EABC29C5087600C4D06C /* Capsule.png */; };
 		9976AFA529C0610C00816E61 /* GachaName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9976AFA429C0610C00816E61 /* GachaName.swift */; };
 		99B9ABC929BA19CB0008C7D3 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 99B9ABC829BA19CB0008C7D3 /* Realm */; };
 		99B9ABCB29BA19CB0008C7D3 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 99B9ABCA29BA19CB0008C7D3 /* RealmSwift */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		990E968629BAFD2700B9A9F1 /* GachaListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GachaListViewController.swift; sourceTree = "<group>"; };
 		9944EAB029C2376500C4D06C /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		9944EABC29C5087600C4D06C /* Capsule.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Capsule.png; sourceTree = "<group>"; };
 		9976AFA429C0610C00816E61 /* GachaName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GachaName.swift; sourceTree = "<group>"; };
 		99B9ABCC29BA1CEB0008C7D3 /* GachaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GachaItem.swift; sourceTree = "<group>"; };
 		99B9ABCE29BA1E790008C7D3 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
@@ -91,8 +93,9 @@
 				99FD106329B5D8760028B2A6 /* InsideListViewController.swift */,
 				99FD106829B5D8770028B2A6 /* Assets.xcassets */,
 				9944EAB029C2376500C4D06C /* icon.png */,
-				99FD106529B5D8760028B2A6 /* Main.storyboard */,
 				99DFF02E29BDBDE4003401C4 /* gachagacha.png */,
+				9944EABC29C5087600C4D06C /* Capsule.png */,
+				99FD106529B5D8760028B2A6 /* Main.storyboard */,
 				99FD106A29B5D8770028B2A6 /* LaunchScreen.storyboard */,
 				99FD106D29B5D8770028B2A6 /* Info.plist */,
 				99FF730329BE1B1C007E26B6 /* FistViewController.swift */,
@@ -178,6 +181,7 @@
 				99B9ABD129BA1E790008C7D3 /* ItemTableViewCell.xib in Resources */,
 				9944EAB129C2376500C4D06C /* icon.png in Resources */,
 				99FD106C29B5D8770028B2A6 /* LaunchScreen.storyboard in Resources */,
+				9944EABD29C5087600C4D06C /* Capsule.png in Resources */,
 				99FD106929B5D8770028B2A6 /* Assets.xcassets in Resources */,
 				99FD106729B5D8760028B2A6 /* Main.storyboard in Resources */,
 				99FF730829BE1E99007E26B6 /* GachaListButtonTableViewCell.xib in Resources */,

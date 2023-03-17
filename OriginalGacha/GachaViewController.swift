@@ -14,6 +14,8 @@ class GachaViewController: UIViewController {
     @IBOutlet var objectImageView: UIImageView!
     @IBOutlet var objectExplanationTextView: UITextView!
     
+    @IBOutlet var capsuleImage: UIImageView!
+    
     // 1. 遷移先に渡したい値を格納する変数を用意する
     var outputValue: [GachaItem]?
     var directoryFileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
@@ -25,6 +27,7 @@ class GachaViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         probabilityCalculation()
         
         // UIへの反映
@@ -41,6 +44,10 @@ class GachaViewController: UIViewController {
                 objectImageView.image = imageData
             } else {}
         } else {}
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [self] in
+            capsuleImage.isHidden = true
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

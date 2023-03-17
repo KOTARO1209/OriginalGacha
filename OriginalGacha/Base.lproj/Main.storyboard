@@ -202,12 +202,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Capsule.png" translatesAutoresizingMaskIntoConstraints="NO" id="N9K-xR-me8">
+                                <rect key="frame" x="16" y="153" width="361" height="547"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dki-14-SUT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="DOi-Nz-0Pb"/>
                     <connections>
+                        <outlet property="capsuleImage" destination="N9K-xR-me8" id="xbP-ia-ZOv"/>
                         <outlet property="objectExplanationTextView" destination="tJO-P3-jmD" id="aTe-eI-cOT"/>
                         <outlet property="objectImageView" destination="a5P-Lm-sw9" id="yyK-rN-r69"/>
                         <outlet property="objectNameLabel" destination="yfF-66-FDy" id="hYW-5R-DRi"/>
@@ -431,6 +436,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Capsule.png" width="297" height="441"/>
         <image name="gachagacha.png" width="533" height="742"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
