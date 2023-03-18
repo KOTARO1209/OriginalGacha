@@ -13,7 +13,7 @@ class FistViewController: UIViewController {
     let realm = try! Realm()
     
     @IBOutlet var gachaTitleLabel: UILabel!
-    @IBOutlet var syouhingazou: UIImageView!
+    //@IBOutlet var syouhingazou: UIImageView!
     
     var gachaData: [GachaItem]!
     var name: String = ""
@@ -53,8 +53,8 @@ class FistViewController: UIViewController {
         }
     }
     
-    @IBAction func tapTransitionButton(_ sender: Any) {
-        // 4. 画面遷移実行
-        performSegue(withIdentifier: "toGachaViewController", sender: nil)
-    }
+//    @IBAction func tapTransitionButton(_ sender: Any) {
+//        // 4. 画面遷移実行
+//        performSegue(withIdentifier: "toGachaViewController", sender: nil)
+//    }
 }
