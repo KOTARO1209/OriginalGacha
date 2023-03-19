@@ -36,6 +36,7 @@
 		9944EAB029C2376500C4D06C /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		9944EABC29C5087600C4D06C /* Capsule.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Capsule.png; sourceTree = "<group>"; };
 		9976AFA429C0610C00816E61 /* GachaName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GachaName.swift; sourceTree = "<group>"; };
+		99B5EDDE29C6C65D00EF76E2 /* LA5MachidaKotaro.mobileprovision */ = {isa = PBXFileReference; lastKnownFileType = file; path = LA5MachidaKotaro.mobileprovision; sourceTree = "<group>"; };
 		99B9ABCC29BA1CEB0008C7D3 /* GachaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GachaItem.swift; sourceTree = "<group>"; };
 		99B9ABCE29BA1E790008C7D3 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		99B9ABCF29BA1E790008C7D3 /* ItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
@@ -109,6 +110,7 @@
 				99DFF02C29BCD4C9003401C4 /* GachaNameViewController.swift */,
 				99FF730529BE1E99007E26B6 /* GachaListButtonTableViewCell.swift */,
 				99FF730629BE1E99007E26B6 /* GachaListButtonTableViewCell.xib */,
+				99B5EDDE29C6C65D00EF76E2 /* LA5MachidaKotaro.mobileprovision */,
 			);
 			path = OriginalGacha;
 			sourceTree = "<group>";
@@ -367,7 +369,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.Machida.Zinenzyoo.OriginalGacha;
+				PRODUCT_BUNDLE_IDENTIFIER = app.Machida.Zinenzyo1209.OriginalGacha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -395,7 +397,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.Machida.Zinenzyoo.OriginalGacha;
+				PRODUCT_BUNDLE_IDENTIFIER = app.Machida.Zinenzyo1209.OriginalGacha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

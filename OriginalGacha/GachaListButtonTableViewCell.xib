@@ -16,10 +16,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFX-4u-Mom">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFX-4u-Mom">
                         <rect key="frame" x="229" y="5" width="76" height="35"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.99607843159999998" green="0.98431372640000003" blue="0.54901963470000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="Fhy-rl-Gd5"/>
+                            <constraint firstAttribute="width" constant="76" id="YT2-D9-XWn"/>
+                        </constraints>
                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" title="セット"/>
@@ -27,14 +30,23 @@
                             <action selector="onButtonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="cSm-1f-TU1"/>
                         </connections>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxF-qx-ImB">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxF-qx-ImB">
                         <rect key="frame" x="53" y="12" width="160" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="160" id="AgG-5l-851"/>
+                            <constraint firstAttribute="height" constant="21" id="yoH-Gd-Ma6"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="uFX-4u-Mom" secondAttribute="trailing" constant="15" id="CRG-mo-cAu"/>
+                    <constraint firstItem="lxF-qx-ImB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="Yqg-3i-HiB"/>
+                    <constraint firstItem="uFX-4u-Mom" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="tD2-Zs-d5g"/>
+                    <constraint firstItem="lxF-qx-ImB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="53" id="z81-kC-9c9"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
